@@ -27,4 +27,4 @@ echo "$($PSQL "UPDATE properties SET type_id=2 WHERE type='nonmetal';")"
 echo "$($PSQL "UPDATE properties SET type_id=3 WHERE type='metalloid';")"
 
 echo "$($PSQL "ALTER TABLE properties ALTER COLUMN type_id SET NOT NULL;")"
-
+echo "$($PSQL "UPDATE elements SET symbol = INITCAP(symbol);")"
